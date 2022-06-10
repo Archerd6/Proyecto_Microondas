@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="microwave_test.RunCucumberTest" time="1.591" tests="9" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="sun.cpu.isalist" value=""/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/mnt/c/Users/ap27r/Desktop/Universidad de Málaga/Ingeniería del Software Avanzada/Entregas/Primer proyecto - Microondas/Entrega Microondas/Proyecto_Microondas/target/test-classes:/mnt/c/Users/ap27r/Desktop/Universidad de Málaga/Ingeniería del Software Avanzada/Entregas/Primer proyecto - Microondas/Entrega Microondas/Proyecto_Microondas/target/classes:/home/davidlinux/.m2/repository/io/cucumber/cucumber-java/7.2.3/cucumber-java-7.2.3.jar:/home/davidlinux/.m2/repository/io/cucumber/cucumber-core/7.2.3/cucumber-core-7.2.3.jar:/home/davidlinux/.m2/repository/io/cucumber/cucumber-gherkin/7.2.3/cucumber-gherkin-7.2.3.jar:/home/davidlinux/.m2/repository/io/cucumber/cucumber-gherkin-messages/7.2.3/cucumber-gherkin-messages-7.2.3.jar:/home/davidlinux/.m2/repository/io/cucumber/messages/17.1.1/messages-17.1.1.jar:/home/davidlinux/.m2/repository/io/cucumber/tag-expressions/4.1.0/tag-expressions-4.1.0.jar:/home/davidlinux/.m2/repository/io/cucumber/cucumber-expressions/15.0.1/cucumber-expressions-15.0.1.jar:/home/davidlinux/.m2/repository/io/cucumber/datatable/7.2.3/datatable-7.2.3.jar:/home/davidlinux/.m2/repository/io/cucumber/cucumber-plugin/7.2.3/cucumber-plugin-7.2.3.jar:/home/davidlinux/.m2/repository/io/cucumber/docstring/7.2.3/docstring-7.2.3.jar:/home/davidlinux/.m2/repository/io/cucumber/html-formatter/17.0.0/html-formatter-17.0.0.jar:/home/davidlinux/.m2/repository/io/cucumber/ci-environment/8.1.0/ci-environment-8.1.0.jar:/home/davidlinux/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/davidlinux/.m2/repository/io/cucumber/cucumber-junit-platform-engine/7.2.3/cucumber-junit-platform-engine-7.2.3.jar:/home/davidlinux/.m2/repository/org/junit/platform/junit-platform-engine/1.8.2/junit-platform-engine-1.8.2.jar:/home/davidlinux/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/davidlinux/.m2/repository/org/junit/platform/junit-platform-commons/1.8.2/junit-platform-commons-1.8.2.jar:/home/davidlinux/.m2/repository/org/junit/platform/junit-platform-suite/1.8.2/junit-platform-suite-1.8.2.jar:/home/davidlinux/.m2/repository/org/junit/platform/junit-platform-suite-api/1.8.2/junit-platform-suite-api-1.8.2.jar:/home/davidlinux/.m2/repository/org/junit/platform/junit-platform-suite-engine/1.8.2/junit-platform-suite-engine-1.8.2.jar:/home/davidlinux/.m2/repository/org/junit/platform/junit-platform-suite-commons/1.8.2/junit-platform-suite-commons-1.8.2.jar:/home/davidlinux/.m2/repository/org/junit/platform/junit-platform-launcher/1.8.2/junit-platform-launcher-1.8.2.jar:/home/davidlinux/.m2/repository/org/junit/jupiter/junit-jupiter/5.8.2/junit-jupiter-5.8.2.jar:/home/davidlinux/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.8.2/junit-jupiter-api-5.8.2.jar:/home/davidlinux/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.8.2/junit-jupiter-params-5.8.2.jar:/home/davidlinux/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.8.2/junit-jupiter-engine-5.8.2.jar:"/>
+    <property name="java.vm.vendor" value="Private Build"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="Unknown"/>
+    <property name="user.timezone" value=""/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="os.name" value="Linux"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-openjdk-amd64/lib"/>
+    <property name="sun.java.command" value="/mnt/c/Users/ap27r/Desktop/Universidad de Málaga/Ingeniería del Software Avanzada/Entregas/Primer proyecto - Microondas/Entrega Microondas/Proyecto_Microondas/target/surefire/surefirebooter6864199571318271293.jar /mnt/c/Users/ap27r/Desktop/Universidad de Málaga/Ingeniería del Software Avanzada/Entregas/Primer proyecto - Microondas/Entrega Microondas/Proyecto_Microondas/target/surefire 2022-06-09T11-11-31_584-jvmRun1 surefire12576628715697217137tmp surefire_03147621489887174707tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/mnt/c/Users/ap27r/Desktop/Universidad de Málaga/Ingeniería del Software Avanzada/Entregas/Primer proyecto - Microondas/Entrega Microondas/Proyecto_Microondas/target/test-classes:/mnt/c/Users/ap27r/Desktop/Universidad de Málaga/Ingeniería del Software Avanzada/Entregas/Primer proyecto - Microondas/Entrega Microondas/Proyecto_Microondas/target/classes:/home/davidlinux/.m2/repository/io/cucumber/cucumber-java/7.2.3/cucumber-java-7.2.3.jar:/home/davidlinux/.m2/repository/io/cucumber/cucumber-core/7.2.3/cucumber-core-7.2.3.jar:/home/davidlinux/.m2/repository/io/cucumber/cucumber-gherkin/7.2.3/cucumber-gherkin-7.2.3.jar:/home/davidlinux/.m2/repository/io/cucumber/cucumber-gherkin-messages/7.2.3/cucumber-gherkin-messages-7.2.3.jar:/home/davidlinux/.m2/repository/io/cucumber/messages/17.1.1/messages-17.1.1.jar:/home/davidlinux/.m2/repository/io/cucumber/tag-expressions/4.1.0/tag-expressions-4.1.0.jar:/home/davidlinux/.m2/repository/io/cucumber/cucumber-expressions/15.0.1/cucumber-expressions-15.0.1.jar:/home/davidlinux/.m2/repository/io/cucumber/datatable/7.2.3/datatable-7.2.3.jar:/home/davidlinux/.m2/repository/io/cucumber/cucumber-plugin/7.2.3/cucumber-plugin-7.2.3.jar:/home/davidlinux/.m2/repository/io/cucumber/docstring/7.2.3/docstring-7.2.3.jar:/home/davidlinux/.m2/repository/io/cucumber/html-formatter/17.0.0/html-formatter-17.0.0.jar:/home/davidlinux/.m2/repository/io/cucumber/ci-environment/8.1.0/ci-environment-8.1.0.jar:/home/davidlinux/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/davidlinux/.m2/repository/io/cucumber/cucumber-junit-platform-engine/7.2.3/cucumber-junit-platform-engine-7.2.3.jar:/home/davidlinux/.m2/repository/org/junit/platform/junit-platform-engine/1.8.2/junit-platform-engine-1.8.2.jar:/home/davidlinux/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/davidlinux/.m2/repository/org/junit/platform/junit-platform-commons/1.8.2/junit-platform-commons-1.8.2.jar:/home/davidlinux/.m2/repository/org/junit/platform/junit-platform-suite/1.8.2/junit-platform-suite-1.8.2.jar:/home/davidlinux/.m2/repository/org/junit/platform/junit-platform-suite-api/1.8.2/junit-platform-suite-api-1.8.2.jar:/home/davidlinux/.m2/repository/org/junit/platform/junit-platform-suite-engine/1.8.2/junit-platform-suite-engine-1.8.2.jar:/home/davidlinux/.m2/repository/org/junit/platform/junit-platform-suite-commons/1.8.2/junit-platform-suite-commons-1.8.2.jar:/home/davidlinux/.m2/repository/org/junit/platform/junit-platform-launcher/1.8.2/junit-platform-launcher-1.8.2.jar:/home/davidlinux/.m2/repository/org/junit/jupiter/junit-jupiter/5.8.2/junit-jupiter-5.8.2.jar:/home/davidlinux/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.8.2/junit-jupiter-api-5.8.2.jar:/home/davidlinux/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.8.2/junit-jupiter-params-5.8.2.jar:/home/davidlinux/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.8.2/junit-jupiter-engine-5.8.2.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/davidlinux"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2022-04-19"/>
+    <property name="java.home" value="/usr/lib/jvm/java-11-openjdk-amd64"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/mnt/c/Users/ap27r/Desktop/Universidad de Málaga/Ingeniería del Software Avanzada/Entregas/Primer proyecto - Microondas/Entrega Microondas/Proyecto_Microondas"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="/mnt/c/Users/ap27r/Desktop/Universidad de Málaga/Ingeniería del Software Avanzada/Entregas/Primer proyecto - Microondas/Entrega Microondas/Proyecto_Microondas/target/surefire/surefirebooter6864199571318271293.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="11.0.15+10-Ubuntu-0ubuntu0.20.04.1"/>
+    <property name="user.name" value="davidlinux"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="5.10.102.1-microsoft-standard-WSL2"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="/home/davidlinux/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="Unknown"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="11.0.15"/>
+    <property name="user.dir" value="/mnt/c/Users/ap27r/Desktop/Universidad de Málaga/Ingeniería del Software Avanzada/Entregas/Primer proyecto - Microondas/Entrega Microondas/Proyecto_Microondas"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Private Build"/>
+    <property name="java.vm.version" value="11.0.15+10-Ubuntu-0ubuntu0.20.04.1"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="55.0"/>
+  </properties>
+  <testcase name="TestGlobal - Suma - Examples - Example #1" classname="TestGlobal - Suma - Examples" time="0.564">
+    <system-out><![CDATA[
+Scenario Outline: Suma      &amp#27;[90m# io/cucumber/skeleton/Test.feature:10&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI have a Calculator&amp#27;[0m &amp#27;[90m# microwave_test.StepDefinitions.i_have_a_calculator()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI sum &amp#27;[0m&amp#27;[32m&amp#27;[1m5&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m        &amp#27;[90m# microwave_test.StepDefinitions.i_sum_and(double,double)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe result is &amp#27;[0m&amp#27;[32m&amp#27;[1m6&amp#27;[0m      &amp#27;[90m# microwave_test.StepDefinitions.the_result_is(double)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="TestGlobal - Suma - Examples - Example #2" classname="TestGlobal - Suma - Examples" time="0.027">
+    <system-out><![CDATA[
+Scenario Outline: Suma      &amp#27;[90m# io/cucumber/skeleton/Test.feature:11&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI have a Calculator&amp#27;[0m &amp#27;[90m# microwave_test.StepDefinitions.i_have_a_calculator()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI sum &amp#27;[0m&amp#27;[32m&amp#27;[1m123&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m9&amp#27;[0m      &amp#27;[90m# microwave_test.StepDefinitions.i_sum_and(double,double)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe result is &amp#27;[0m&amp#27;[32m&amp#27;[1m132&amp#27;[0m    &amp#27;[90m# microwave_test.StepDefinitions.the_result_is(double)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="TestGlobal - Suma - Examples - Example #3" classname="TestGlobal - Suma - Examples" time="0.03">
+    <system-out><![CDATA[
+Scenario Outline: Suma      &amp#27;[90m# io/cucumber/skeleton/Test.feature:12&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI have a Calculator&amp#27;[0m &amp#27;[90m# microwave_test.StepDefinitions.i_have_a_calculator()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI sum &amp#27;[0m&amp#27;[32m&amp#27;[1m876&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m557&amp#27;[0m    &amp#27;[90m# microwave_test.StepDefinitions.i_sum_and(double,double)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe result is &amp#27;[0m&amp#27;[32m&amp#27;[1m1433&amp#27;[0m   &amp#27;[90m# microwave_test.StepDefinitions.the_result_is(double)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="TestGlobal - Suma - Examples - Example #4" classname="TestGlobal - Suma - Examples" time="0.028">
+    <system-out><![CDATA[
+Scenario Outline: Suma      &amp#27;[90m# io/cucumber/skeleton/Test.feature:13&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI have a Calculator&amp#27;[0m &amp#27;[90m# microwave_test.StepDefinitions.i_have_a_calculator()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI sum &amp#27;[0m&amp#27;[32m&amp#27;[1m2&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m5543&amp#27;[0m     &amp#27;[90m# microwave_test.StepDefinitions.i_sum_and(double,double)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe result is &amp#27;[0m&amp#27;[32m&amp#27;[1m5545&amp#27;[0m   &amp#27;[90m# microwave_test.StepDefinitions.the_result_is(double)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="TestGlobal - Resta" classname="TestGlobal" time="0.026">
+    <system-out><![CDATA[
+Scenario: Resta               &amp#27;[90m# io/cucumber/skeleton/Test.feature:16&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI have a Calculator&amp#27;[0m   &amp#27;[90m# microwave_test.StepDefinitions.i_have_a_calculator()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI substract &amp#27;[0m&amp#27;[32m&amp#27;[1m88&amp#27;[0m&amp#27;[32m value &amp#27;[0m&amp#27;[32m&amp#27;[1m8&amp#27;[0m &amp#27;[90m# microwave_test.StepDefinitions.i_substract_value(double,double)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe result is &amp#27;[0m&amp#27;[32m&amp#27;[1m80&amp#27;[0m       &amp#27;[90m# microwave_test.StepDefinitions.the_result_is(double)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="TestGlobal - Multiplicacion" classname="TestGlobal" time="0.029">
+    <system-out><![CDATA[
+Scenario: Multiplicacion     &amp#27;[90m# io/cucumber/skeleton/Test.feature:21&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI have a Calculator&amp#27;[0m  &amp#27;[90m# microwave_test.StepDefinitions.i_have_a_calculator()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI multiply &amp#27;[0m&amp#27;[32m&amp#27;[1m88&amp#27;[0m&amp#27;[32m value &amp#27;[0m&amp#27;[32m&amp#27;[1m8&amp#27;[0m &amp#27;[90m# microwave_test.StepDefinitions.i_multiply_value(double,double)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe result is &amp#27;[0m&amp#27;[32m&amp#27;[1m704&amp#27;[0m     &amp#27;[90m# microwave_test.StepDefinitions.the_result_is(double)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="TestGlobal - Division" classname="TestGlobal" time="0.025">
+    <system-out><![CDATA[
+Scenario: Division          &amp#27;[90m# io/cucumber/skeleton/Test.feature:26&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI have a Calculator&amp#27;[0m &amp#27;[90m# microwave_test.StepDefinitions.i_have_a_calculator()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI divide &amp#27;[0m&amp#27;[32m&amp#27;[1m88&amp#27;[0m&amp#27;[32m value &amp#27;[0m&amp#27;[32m&amp#27;[1m8&amp#27;[0m  &amp#27;[90m# microwave_test.StepDefinitions.i_divide_value(java.lang.Integer,java.lang.Integer)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe result is &amp#27;[0m&amp#27;[32m&amp#27;[1m11&amp#27;[0m     &amp#27;[90m# microwave_test.StepDefinitions.the_result_is(double)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="TestGlobal - Factorial" classname="TestGlobal" time="0.024">
+    <system-out><![CDATA[
+Scenario: Factorial                &amp#27;[90m# io/cucumber/skeleton/Test.feature:31&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI have a Calculator&amp#27;[0m        &amp#27;[90m# microwave_test.StepDefinitions.i_have_a_calculator()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI select the factorial of &amp#27;[0m&amp#27;[32m&amp#27;[1m3&amp#27;[0m &amp#27;[90m# microwave_test.StepDefinitions.i_select_the_factorial_of(java.lang.Integer)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe result is &amp#27;[0m&amp#27;[32m&amp#27;[1m6&amp#27;[0m             &amp#27;[90m# microwave_test.StepDefinitions.the_result_is(double)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="TestGlobal - Primo" classname="TestGlobal" time="0.027">
+    <system-out><![CDATA[
+Scenario: Primo                       &amp#27;[90m# io/cucumber/skeleton/Test.feature:36&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI have a Calculator&amp#27;[0m           &amp#27;[90m# microwave_test.StepDefinitions.i_have_a_calculator()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI ask if &amp#27;[0m&amp#27;[32m&amp#27;[1m7542&amp#27;[0m&amp#27;[32m is prime&amp#27;[0m         &amp#27;[90m# microwave_test.StepDefinitions.i_ask_if_is_prime(java.lang.Integer)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe result boolean as int is &amp#27;[0m&amp#27;[32m&amp#27;[1m0&amp#27;[0m &amp#27;[90m# microwave_test.StepDefinitions.the_result_boolean_as_int_is(java.lang.Integer)&amp#27;[0m
+]]></system-out>
+  </testcase>
+</testsuite>

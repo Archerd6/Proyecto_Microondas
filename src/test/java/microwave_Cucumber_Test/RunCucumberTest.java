@@ -1,4 +1,4 @@
-package microwave_test;
+package microwave_Cucumber_Test;
 
 import org.junit.platform.suite.api.ConfigurationParameter;
 import org.junit.platform.suite.api.IncludeEngines;
@@ -12,7 +12,7 @@ import static io.cucumber.junit.platform.engine.Constants.GLUE_PROPERTY_NAME;
 @IncludeEngines("cucumber")
 @SelectClasspathResource("io/cucumber/skeleton")
 @ConfigurationParameter(key = PLUGIN_PROPERTY_NAME, value = "pretty")
-@ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = "microwave_test")
+@ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = "microwave_Cucumber_Test")
 public class RunCucumberTest
 {
 	
