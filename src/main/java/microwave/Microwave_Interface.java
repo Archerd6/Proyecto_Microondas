@@ -14,7 +14,7 @@ public interface Microwave_Interface
 	public void timer_dec(Microwave mw);
 	/**Set the timer to 0*/
 	public void timer_reset(Microwave mw);
-	/**Try to start the microwave*/
+	
 	
 	/**Try to open the door*/
 	public void door_opened(Microwave mw);
@@ -25,6 +25,7 @@ public interface Microwave_Interface
 	/**Try to remove a item*/
 	public void item_removed(Microwave mw);
 	
+	/**Try to start the microwave*/
 	public void cooking_start(Microwave mw);
 	/**Try to stop the microwave*/
 	public void cooking_stop(Microwave mw);
