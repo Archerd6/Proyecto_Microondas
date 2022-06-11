@@ -3,7 +3,7 @@
 Implementación del proyecto Microondas propuesto en Ingeniería de Software Avanzada
 
 <p align="center">
-	<img src="https://raw.githubusercontent.com/Archerd6/Proyecto_Microondas/main/res/main/Microwave.png" style="width:30%">
+	<img src="https://raw.githubusercontent.com/Archerd6/Proyecto_Microondas/main/res/main/Microwave.png" style="width:80%">
 </p>
 
 ## Objetivos
