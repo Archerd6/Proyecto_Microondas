@@ -29,6 +29,7 @@ public class Clock extends JFrame /*La clase principal es una ventana (JFrame)*/
 		this.setContentPane(new Panel());
 		getContentPane().setLayout(null);
 		
+		
 		textField = new JTextField();
 		textField.setEditable(false);
 		textField.setBounds(10, 29, 264, 109);
@@ -42,23 +43,8 @@ public class Clock extends JFrame /*La clase principal es una ventana (JFrame)*/
 	
 	public Clock(Microwave mw2)
 	{
+		this();
 		mw = mw2;
-		setTitle("Clock");       /*Nombre de la ventana*/
-		this.setSize(300, 190); /*Tamano de la ventana*/
-		this.setBounds(100, 500, 300, 200);
-		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-		this.setContentPane(new Panel());
-		getContentPane().setLayout(null);
-		
-		textField = new JTextField();
-		textField.setEditable(false);
-		textField.setBounds(10, 29, 264, 109);
-		getContentPane().add(textField);
-		textField.setColumns(10);/* Para apagar el programa cuando cierre la ventana*/
-		
-		ImageIcon icon =new ImageIcon(getClass().getResource("/imgs/Relog.png"));
-		Image image = icon.getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH);
-		setIconImage(image);
 		Momento momento = new Momento();
 		Thread trid = new Thread(momento);
 		trid.start();

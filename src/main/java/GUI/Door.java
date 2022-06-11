@@ -9,6 +9,14 @@ import java.awt.Image;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+
+import GUI.Clock.Momento;
+import microwave.MW_ClosedWithItem;
+import microwave.MW_ClosedWithNoItem;
+import microwave.MW_OpenWithItem;
+import microwave.MW_OpenWithNoItem;
+import microwave.Microwave;
+
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -22,7 +30,10 @@ public class Door extends JFrame /*La clase principal es una ventana (JFrame)*/
 	/** Alto de la ventana*/
 	private int height = 480;
 	
-	boolean change = false;
+	private boolean changed = false;
+	protected Microwave mw;
+	
+	private JButton btnImage = new JButton("");
 	
 	public Door()
 	{
@@ -33,7 +44,7 @@ public class Door extends JFrame /*La clase principal es una ventana (JFrame)*/
 		
 		this.setContentPane(new Panel());
 		getContentPane().setLayout(null);
-		JButton btnImage = new JButton("");
+		
 		btnImage.setEnabled(false);
 		JButton btnOpenClose = new JButton("Open - Close");
 		
@@ -41,17 +52,27 @@ public class Door extends JFrame /*La clase principal es una ventana (JFrame)*/
 		{
 			public void actionPerformed(ActionEvent e)
 			{
-				change = !change;
-				if(change)
+				if(mw.getState().getClass().equals(MW_ClosedWithNoItem.class))
 				{
-					ImageIcon icon2 =new ImageIcon(getClass().getResource("/imgs/Backround2.png"));
-					btnImage.setIcon(icon2);
+					mw.door_opened();
+					changed = true;
 				}
-				else
+				if(mw.getState().getClass().equals(MW_OpenWithNoItem.class) && !changed)
 				{
-					ImageIcon icon2 =new ImageIcon(getClass().getResource("/imgs/Backround1.png"));
-					btnImage.setIcon(icon2);
+					mw.door_closed();
+					changed = true;
 				}
+				if(mw.getState().getClass().equals(MW_OpenWithItem.class) && !changed)
+				{
+					mw.door_closed();
+					changed = true;
+				}
+				if(mw.getState().getClass().equals(MW_ClosedWithItem.class) && !changed)
+				{
+					mw.door_opened();
+				}
+				
+				changed = false;
 			}
 		});
 		btnOpenClose.setBounds(438, 310, 136, 40);
@@ -67,8 +88,82 @@ public class Door extends JFrame /*La clase principal es una ventana (JFrame)*/
 		
 		ImageIcon icon2 =new ImageIcon(getClass().getResource("/imgs/Backround1.png"));
 		btnImage.setIcon(icon2);
+		
+		JButton btnPutRemove = new JButton("Put - Remove Item");
+		btnPutRemove.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e)
+			{
+				if(mw.getState().getClass().equals(MW_OpenWithNoItem.class))
+				{
+					mw.item_placed();
+					changed = true;
+				}
+				if(mw.getState().getClass().equals(MW_OpenWithItem.class) && !changed)
+				{
+					mw.item_removed();
+				}
+				changed = false;
+			}
+		});
+		btnPutRemove.setFocusable(false);
+		btnPutRemove.setBounds(10, 310, 174, 40);
+		getContentPane().add(btnPutRemove);
 	}
 	
+	public Door(Microwave mw)
+	{
+		this();
+		this.mw = mw;
+		Momento momento = new Momento();
+		Thread trid = new Thread(momento);
+		trid.start();
+	}
+
+	public class Momento extends Thread
+	{
+		public void run()
+		{
+			while(true)
+			{
+				
+				try
+				{
+					if(mw.getState().getClass().equals(MW_ClosedWithNoItem.class))
+					{
+							ImageIcon icon2 =new ImageIcon(getClass().getResource("/imgs/Backround1.png"));
+							btnImage.setIcon(icon2);
+//							System.out.println(mw.getState());
+					}
+					if(mw.getState().getClass().equals(MW_OpenWithNoItem.class))
+					{
+							ImageIcon icon2 =new ImageIcon(getClass().getResource("/imgs/Backround2.png"));
+							btnImage.setIcon(icon2);
+//							System.out.println(mw.getState());
+					}
+					if(mw.getState().getClass().equals(MW_OpenWithItem.class))
+					{
+							ImageIcon icon2 =new ImageIcon(getClass().getResource("/imgs/Backround3.png"));
+							btnImage.setIcon(icon2);
+//							System.out.println(mw.getState());
+					}
+					if(mw.getState().getClass().equals(MW_ClosedWithItem.class))
+					{
+							ImageIcon icon2 =new ImageIcon(getClass().getResource("/imgs/Backround4.png"));
+							btnImage.setIcon(icon2);
+//							System.out.println(mw.getState());
+					}
+					Thread.sleep(100);
+					
+				}
+				catch (InterruptedException e)
+				{
+					e.printStackTrace();
+				}
+			}
+		}
+	}
+
 	public class Panel extends JPanel
 	{
 		protected void paintComponent(Graphics g)

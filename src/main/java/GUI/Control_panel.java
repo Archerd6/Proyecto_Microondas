@@ -94,7 +94,7 @@ public class Control_panel extends JFrame
 		getContentPane().add(textField);
 		textField.setColumns(10);
 		
-		Door D = new Door();
+		Door D = new Door(mw);
     	D.setVisible(true);
     	
     	Clock C = new Clock(mw);
