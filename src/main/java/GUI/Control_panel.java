@@ -167,6 +167,33 @@ public class Control_panel extends JFrame
     	ImageIcon icon =new ImageIcon(getClass().getResource("/imgs/microwave.png"));
 		Image image = icon.getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH);
 		setIconImage(image);
+		Momento momento = new Momento();
+		Thread trid = new Thread(momento);
+		trid.start();
+	}
+	
+	public class Momento extends Thread
+	{
+		public void run()
+		{
+			while(true)
+			{
+				
+				try
+				{
+					if(mw.getState().getClass().equals(MW_Cooking.class))
+					{
+							mw.timer_dec();
+					}
+					Thread.sleep(1000);
+					
+				}
+				catch (InterruptedException e)
+				{
+					e.printStackTrace();
+				}
+			}
+		}
 	}
 	
 	public class Panel extends JPanel

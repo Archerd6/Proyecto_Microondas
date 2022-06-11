@@ -12,6 +12,8 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 import microwave.Microwave;
+import java.awt.Font;
+import javax.swing.SwingConstants;
 
 
 @SuppressWarnings("serial")
@@ -31,6 +33,9 @@ public class Clock extends JFrame /*La clase principal es una ventana (JFrame)*/
 		
 		
 		textField = new JTextField();
+		textField.setHorizontalAlignment(SwingConstants.CENTER);
+		textField.setText("00:00");
+		textField.setFont(new Font("Tahoma", Font.PLAIN, 35));
 		textField.setEditable(false);
 		textField.setBounds(10, 29, 264, 109);
 		getContentPane().add(textField);
@@ -58,7 +63,7 @@ public class Clock extends JFrame /*La clase principal es una ventana (JFrame)*/
 			{
 				try
 				{
-					textField.setText(Integer.toString(mw.getTime()));
+					textField.setText(transformTime(mw.getTime()));
 					Thread.sleep(100);
 					
 				}
@@ -69,7 +74,22 @@ public class Clock extends JFrame /*La clase principal es una ventana (JFrame)*/
 			}
 		}
 	}
-
+	
+	private static String transformTime(int timer) {
+		int min = 0;
+		int sec = timer;
+		if((timer/60)!=0) {
+			min = timer/60;
+			sec = 0;
+			timer = timer%60;
+		}
+		if(timer != 0) {
+			sec = timer;
+		}
+		return String.format("%02d:%02d",min,sec);
+		
+	}
+	
 	public class Panel extends JPanel
 	{
 		protected void paintComponent(Graphics g)
