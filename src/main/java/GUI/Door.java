@@ -10,9 +10,9 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-import GUI.Clock.Momento;
 import microwave.MW_ClosedWithItem;
 import microwave.MW_ClosedWithNoItem;
+import microwave.MW_Cooking;
 import microwave.MW_OpenWithItem;
 import microwave.MW_OpenWithNoItem;
 import microwave.Microwave;
@@ -44,8 +44,6 @@ public class Door extends JFrame /*La clase principal es una ventana (JFrame)*/
 		
 		this.setContentPane(new Panel());
 		getContentPane().setLayout(null);
-		
-		btnImage.setEnabled(false);
 		JButton btnOpenClose = new JButton("Open - Close");
 		
 		btnOpenClose.addActionListener(new ActionListener()
@@ -129,6 +127,7 @@ public class Door extends JFrame /*La clase principal es una ventana (JFrame)*/
 				
 				try
 				{
+//					System.out.println(mw.getState());
 					if(mw.getState().getClass().equals(MW_ClosedWithNoItem.class))
 					{
 							ImageIcon icon2 =new ImageIcon(getClass().getResource("/imgs/Backround1.png"));
@@ -150,6 +149,12 @@ public class Door extends JFrame /*La clase principal es una ventana (JFrame)*/
 					if(mw.getState().getClass().equals(MW_ClosedWithItem.class))
 					{
 							ImageIcon icon2 =new ImageIcon(getClass().getResource("/imgs/Backround4.png"));
+							btnImage.setIcon(icon2);
+//							System.out.println(mw.getState());
+					}
+					if(mw.getState().getClass().equals(MW_Cooking.class))
+					{
+							ImageIcon icon2 =new ImageIcon(getClass().getResource("/imgs/Backround5.png"));
 							btnImage.setIcon(icon2);
 //							System.out.println(mw.getState());
 					}

@@ -26,6 +26,7 @@ public class Control_panel extends JFrame
 {
 	private JTextField textField;
 	protected Microwave mw = new Microwave();
+	private boolean changed = false;
 	
 	public Control_panel()
 	{
@@ -46,7 +47,7 @@ public class Control_panel extends JFrame
 			}
 		});
 		btnPowerIncr.setFocusable(false);
-		btnPowerIncr.setBounds(179, 162, 132, 23);
+		btnPowerIncr.setBounds(179, 78, 132, 23);
 		getContentPane().add(btnPowerIncr);
 		
 		JButton btnPowerDecr = new JButton("Power Decrement");
@@ -59,7 +60,7 @@ public class Control_panel extends JFrame
 			}
 		});
 		btnPowerDecr.setFocusable(false);
-		btnPowerDecr.setBounds(10, 162, 142, 23);
+		btnPowerDecr.setBounds(10, 78, 142, 23);
 		getContentPane().add(btnPowerDecr);
 		
 		JButton btnTimerIcrm = new JButton("Timer Increment");
@@ -72,7 +73,7 @@ public class Control_panel extends JFrame
 			}
 		});
 		btnTimerIcrm.setFocusable(false);
-		btnTimerIcrm.setBounds(179, 208, 132, 23);
+		btnTimerIcrm.setBounds(179, 159, 132, 23);
 		getContentPane().add(btnTimerIcrm);
 		
 		JButton btnTimerDecr = new JButton("Timer Decrement");
@@ -85,7 +86,7 @@ public class Control_panel extends JFrame
 			}
 		});
 		btnTimerDecr.setFocusable(false);
-		btnTimerDecr.setBounds(10, 208, 142, 23);
+		btnTimerDecr.setBounds(10, 159, 142, 23);
 		getContentPane().add(btnTimerDecr);
 		
 		textField = new JTextField();
@@ -93,6 +94,69 @@ public class Control_panel extends JFrame
 		textField.setBounds(10, 26, 301, 41);
 		getContentPane().add(textField);
 		textField.setColumns(10);
+		
+		JButton btnPowerReset = new JButton("Reset Power");
+		btnPowerReset.setFocusable(false);
+		btnPowerReset.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e)
+			{
+				mw.power_reset();
+				textField.setText(mw.getDisplayComponent().getDisplay());
+			}
+		});
+		btnPowerReset.setBounds(89, 112, 151, 23);
+		getContentPane().add(btnPowerReset);
+		
+		JButton btnResetTimer = new JButton("Reset Timer");
+		btnResetTimer.setFocusable(false);
+		btnResetTimer.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e)
+			{
+				mw.timer_reset();
+				textField.setText(mw.getDisplayComponent().getDisplay());
+			}
+		});
+		btnResetTimer.setBounds(89, 193, 151, 23);
+		getContentPane().add(btnResetTimer);
+		
+		JButton btnStartStop = new JButton("Start-Stop Microwave");
+		btnStartStop.setFocusable(false);
+		btnStartStop.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e)
+			{
+				if(mw.getState().getClass().equals(MW_ClosedWithItem.class))
+				{				
+					try
+					{
+						mw.cooking_start();
+						changed = true;
+					}
+					catch(Exception ex)
+					{
+						
+					}
+				}
+				if(mw.getState().getClass().equals(MW_Cooking.class) && !changed)
+				{
+					try
+					{
+						mw.cooking_stop();
+					}
+					catch(Exception ex)
+					{
+						
+					}
+				}
+				changed = false;
+				
+			}
+		});
+		btnStartStop.setBackground(new Color(255, 99, 71));
+		btnStartStop.setBounds(79, 252, 161, 23);
+		getContentPane().add(btnStartStop);
 		
 		Door D = new Door(mw);
     	D.setVisible(true);

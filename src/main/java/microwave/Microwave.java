@@ -51,6 +51,7 @@ public class Microwave
 	public void power_reset()
 	{
 		state.power_reset(this);
+		displayComponent.setDisplay("0");
 	}
 	
 	public void timer_inc()
@@ -66,7 +67,7 @@ public class Microwave
 	public void timer_reset()
 	{
 		state.timer_reset(this);
-		displayComponent.setDisplay(Integer.toString(timer));
+		displayComponent.setDisplay("0");
 	}
 	
 	
