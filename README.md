@@ -2,6 +2,10 @@
 
 Implementación del proyecto Microondas propuesto en Ingeniería de Software Avanzada
 
+<p align="center">
+	<img src="https://raw.githubusercontent.com/Archerd6/Proyecto_Microondas/main/res/main/Microwave.png" style="width:30%">
+</p>
+
 ## Objetivos
 El principal objetivo de este proyecto es mostrar todo lo que se ha aprendido a lo largo de la asignatura. Se puede dividir el desarroyo del proyecto en los siguientes apartados:
 - Implementación en java (Usando Patrones de diseño)
