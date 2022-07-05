@@ -11,3 +11,6 @@ El principal objetivo de este proyecto es mostrar todo lo que se ha aprendido a 
 - Implementación en java (Usando Patrones de diseño)
 - Test con JUnit
 - Definición de escenarios de pruebas con Gherkin e implementarlos con Cucumber
+
+
+###### Versión Java: &nbsp; &nbsp; &nbsp;  JDK 1.8
